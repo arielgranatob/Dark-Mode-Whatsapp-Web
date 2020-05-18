@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Dark Mode Whatsapp Web",
+    "description": "Leve e simples extensão para modificar o Web Whatsapp para deixar no modo escuro com as cores oficiais.",
+    "author": "Ariel Granato",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_title": "Dark Mode Whatsapp Web",
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "web_accessible_resources": [
+        "content.js"
+    ],
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "activeTab",
+        "webRequest",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
