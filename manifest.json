@@ -18,16 +18,12 @@
         "content.js"
     ],
     "permissions": [
-        "declarativeContent",
-        "storage",
-        "activeTab",
-        "webRequest",
-        "tabs"
+        
     ],
     "content_scripts": [
         {
             "matches": [
-                "https://*/*"
+                "https://web.whatsapp.com/"
             ],
             "js": [
                 "content.js"
